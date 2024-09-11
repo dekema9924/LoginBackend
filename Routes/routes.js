@@ -17,7 +17,7 @@ route.use(bodyParser.urlencoded({ extended: true }))
 route.use(bodyParser.json());
 route.use(cors({
     credentials: true,
-    origin: 'https://loginbackend-rzkg.onrender.com',
+    origin: 'https://loginbackend-qtu1.onrender.com/routes',
 }));
 route.use(cookieParser())
 
