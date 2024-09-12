@@ -16,7 +16,7 @@ var jwt = require('jsonwebtoken');
 route.use(bodyParser.urlencoded({ extended: true }))
 route.use(bodyParser.json());
 const corsOptions ={
-    origin:'https://loginbackend-qtu1.onrender.com', 
+    origin:'http://localhost:3000', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
