@@ -16,7 +16,7 @@ const cors = require('cors');
 app.use('/routes', route);
 app.use(cookieParser())
 const corsOptions ={
-    origin:'http://localhost:3000', 
+    origin:'http://localhost:5173', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
@@ -28,7 +28,7 @@ app.get('/', (req,res)=>{
     res.redirect('/routes')
 })
 
-app.listen(process.env.port || 3000, ()=>{
+app.listen( 3000, ()=>{
     console.log(`server open on http://localhost:${port}`)
     mongoose.connect(process.env.MONGODBURL)
     .then(console.log('connected to db'))
