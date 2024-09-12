@@ -15,10 +15,12 @@ var jwt = require('jsonwebtoken');
 //middlewares
 route.use(bodyParser.urlencoded({ extended: true }))
 route.use(bodyParser.json());
-route.use(cors({
-    credentials: true,
-    origin: 'https://loginbackend-qtu1.onrender.com/routes',
-}));
+const corsOptions ={
+    origin:'https://loginbackend-qtu1.onrender.com', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 route.use(cookieParser())
 
 
