@@ -28,7 +28,7 @@ app.get('/', (req,res)=>{
     res.redirect('/routes')
 })
 
-app.listen(port, ()=>{
+app.listen(process.env.port || 3000, ()=>{
     console.log(`server open on http://localhost:${port}`)
     mongoose.connect(process.env.MONGODBURL)
     .then(console.log('connected to db'))
