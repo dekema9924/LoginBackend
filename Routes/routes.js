@@ -15,7 +15,7 @@ var jwt = require('jsonwebtoken');
 //middlewares
 route.use(bodyParser.urlencoded({ extended: true }))
 route.use(bodyParser.json());
-app.use(cors({
+route.use(cors({
     origin: function(origin, callback){
       return callback(null, true);
     },
