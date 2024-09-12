@@ -15,7 +15,13 @@ const cors = require('cors');
 //route middleware
 app.use('/routes', route);
 app.use(cookieParser())
-app.use(cors());
+app.use(cors({
+    origin: function(origin, callback){
+      return callback(null, true);
+    },
+    optionsSuccessStatus: 200,
+    credentials: true
+  }));
 
 
 
