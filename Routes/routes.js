@@ -15,10 +15,11 @@ var jwt = require('jsonwebtoken');
 //middlewares
 route.use(bodyParser.urlencoded({ extended: true }))
 route.use(bodyParser.json());
-route.use(cors({
-    credentials: true,
-    origin: 'http://localhost:5173',
-}));
+// route.use(cors({
+//     // credentials: true,
+//     // origin: 'http://localhost:5173',
+// }));
+route.use(cors())
 route.use(cookieParser())
 
 
